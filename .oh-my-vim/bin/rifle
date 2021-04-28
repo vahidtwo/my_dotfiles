@@ -1,0 +1,7 @@
+#!/home/vahid/.oh-my-vim/bin/python3
+# EASY-INSTALL-DEV-SCRIPT: 'ranger-fm==1.9.3','rifle'
+__requires__ = 'ranger-fm==1.9.3'
+__import__('pkg_resources').require('ranger-fm==1.9.3')
+__file__ = '/home/vahid/.vim/bundle/ranger/build_scripts/rifle'
+with open(__file__) as f:
+    exec(compile(f.read(), __file__, 'exec'))

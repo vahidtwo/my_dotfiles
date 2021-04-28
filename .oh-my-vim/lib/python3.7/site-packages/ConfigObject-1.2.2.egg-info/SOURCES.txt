@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+ConfigObject/__init__.py
+ConfigObject.egg-info/PKG-INFO
+ConfigObject.egg-info/SOURCES.txt
+ConfigObject.egg-info/dependency_links.txt
+ConfigObject.egg-info/entry_points.txt
+ConfigObject.egg-info/not-zip-safe
+ConfigObject.egg-info/requires.txt
+ConfigObject.egg-info/top_level.txt
+ConfigObject/tests/__init__.py
+ConfigObject/tests/config.py
+ConfigObject/tests/tests.py

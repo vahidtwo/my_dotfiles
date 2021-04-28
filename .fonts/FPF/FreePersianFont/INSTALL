@@ -1,0 +1,35 @@
+
+راهنمای کوچک نصب فونت 
+
+برای نصب این فونت در لینوکس به روش زیر عمل کنید:
+
+۱. ترمینال (کنسول خز فرمان) را باز کنید
+۲.در دایرکتوری خانگی خود فلدر .fonts را ایجاد کنید.
+$mkdir ~/.fonts
+۳.در این مرحله کافیست فونت‌ را به دایرکتوری ساخته شده کپی کنید. برای این کار کافیست از دستور زیر استفاده کنید.
+$cp FPUF-nakhost.ttf  ~/.fonts
+بسیار خوب، فونت نصب شده است. کافیست از آن استفاده کنید و لذت ببرید.
+
+
+Installing FreePersianFont on  Linux
+
+You have 2 way for instaling FPF in your Linux, 
+
+1. Only your User
+
+ If you want to install FPF only for your own user, you can make a directory in your Home directory with .fonts name, like this:
+
+$mkdir ~/.fonts
+
+and copy all fonts to this directory. In some sitution you are in force to log out and log in to ensure that all changes are applied.
+
+
+2. All system users
+
+ If you  want to install fpf for all users you can copy all *.ttf fonts to /usr/share/fonts/ttf/ then run "fc-cache" command as root user.
+
+
+Thanks to use FreePersianFont 
+
+2. For all users
+
