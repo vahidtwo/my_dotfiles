@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/vahid/.vim'
+let g:netrw_dirhist_2='/home/vahid/elasticsearch.yml'
+let g:netrw_dirhist_1='/home/vahid/project/py/my_note/advance_py'

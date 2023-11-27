@@ -1,5 +1,6 @@
-#If you come from bash you might have to change your $PATH.
- export PATH=$HOME/myScript:$PATH:~/.local/bin:PATH=/bin
+# If you come from bash you might have to change your $PATH.
+ export PATH=$HOME/myScript:$PATH:~/.local/bin:$HOME/.config/composer/vendor/bin
+
 # Path to your oh-my-zsh installation.
   export ZSH="/home/vahid/.oh-my-zsh"
 
@@ -64,17 +65,33 @@ plugins=(
     git
     gitfast
     python
-    django
     pip
+    
     virtualenv
     archlinux
     zsh-autosuggestions
 )
 source $ZSH/oh-my-zsh.sh
-
-cowsay "Hello :D have good day" | lolcat
+toilet -f mono12 --gay -F border Be Happy
+#source ~/.venv/bin/activate
 # User configuration
-
+#vscode 
+alias c='code .'
+#alias vim='nvim'
+upcode() {
+    echo current version: $(code -v | head -n 1);
+    echo unzip source;
+    mkdir -p /tmp/vscode-files/;
+    tar -C /tmp/vscode-files -xf $1;
+    echo remove current version
+    sudo rm -rf /opt/vscode;
+    echo replace new version
+    sudo cp -r /tmp/vscode-files/* /opt/vscode;
+    echo create link
+    sudo ln -sf /opt/vscode/bin/code /usr/bin/code
+    echo updated successfully!
+    echo current version: $(code -v | head -n 1);
+}
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -101,17 +118,43 @@ cowsay "Hello :D have good day" | lolcat
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias dgld="python manage.py loaddata"
-alias dgma="python manage.py makemigrations"
-alias dgmi="python manage.py migrate"
-alias dgrun="python manage.py runserver 0.0.0.0:8000"
-alias ll="ls -ltrha | lolcat"
+#alias petabaddb="mysql -u petabad -p']70{toBba9?j' -P 3377 -h 135.181.134.151 petabad"
+alias cl="clear"
+alias ll="ls -ltrha"
 alias ae="deactivate;source ./.venv/bin/activate"
 alias de="deactivate"
 alias ec="expressvpn connect"
 alias ed="expressvpn disconnect"
 alias cdd="cd ~/project/py/django/"
+alias cdp="cd ~/project/py"
+alias cdfc="cd ~/project/py/fastcrawler"
+alias cdplasco="cd ~/project/py/django/plasco/Plasco_backend"
 alias cdpy="cd ~/project/py"
+alias cdb="cd ~/project/py/django/bernet"
+#django
+alias dgld="python manage.py loaddata"
+alias dgma="python manage.py makemigrations"
+alias dgmi="python manage.py migrate"
+alias dgtest="python manage.py test"
+alias dgme="python manage.py makemessages -l fa --no-location "
+alias dgco="python manage.py compilemessages -l fa"
+#django bernet
+alias dgdr="python manage.py dumpdata account.role account.rolepermission --indent 2 > core/fixtures/role.json"
+alias dgdp="python manage.py dumpdata account.permission --indent 2 > core/fixtures/permission.json"
+alias update_fixture="python manage.py runscript set_all_role_permissions;dgdr;dgdp"
+#docker compose
+alias pgau="docker compose -f ~/docker-compose/pgadmin.yaml up -d"
+alias pgad="docker compose -f ~/docker-compose/pgadmin.yaml down"
+alias elu="docker compose -f ~/docker-compose/elastic.yaml up -d"
+alias eld="docker compose -f ~/docker-compose/elastic.yaml down"
+#git
+alias gcod="git checkout develop"
+alias gcos="git checkout staging"
+alias gmd="git merge develop"
+alias ggpulls="git pull origin staging"
+alias update_develop="git checkout develop;git pull staging"
 # Added by oh-my-vim
+#
 export PATH=$PATH:/home/vahid/.oh-my-vim/bin
 
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
